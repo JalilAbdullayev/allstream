@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const { title, description, image } = Astro.props;
+---
+
+<div
+  style={`background-image: url(${image})`}
+  class="flex flex-col justify-between items-center gap-12.5 lg:first:items-start lg:last:items-end group pt-18 lg:first:ps-20 lg:last:pe-20 px-12.5 pb-26 first:bg-[#3D404C]/77 last:bg-[#2E2937]/77 bg-[#2A2C3A]/77 bg-no-repeat bg-center bg-cover bg-blend-multiply"
+>
+  <h4
+    class="text-2xl font-semibold tracking-wider text-center text-white lg:group-first:text-start lg:group-last:text-end leading-7.5 uppercase"
+  >
+    {title}
+  </h4>
+  <div
+    class="text-sm leading-7 tracking-wider text-center text-white lg:group-first:text-start lg:group-last:text-end"
+  >
+    {description}
+  </div>
+  <a
+    href="#"
+    class="text-[#363333] btn btn-text h-14 w-52.5 px-0 bg-white rounded-none text-base font-medium tracking-wider leading-7"
+  >
+    More...
+  </a>
+</div>

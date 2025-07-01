@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import arrowLeft from "/src/assets/arrow-left.svg";
+import arrowRight from "/src/assets/arrow-right.svg";
+---
+
+<div class="flex items-center gap-4 absolute z-50 bottom-7.5">
+  <button
+    type="button"
+    id="prevBtn"
+    class="btn btn-circle btn-outline border-[#A2A6CA] size-12"
+  >
+    <Image src={arrowLeft} alt="Arrow Left" />
+  </button>
+  <button
+    type="button"
+    id="nextBtn"
+    class="btn btn-circle btn-outline border-[#A2A6CA] size-12"
+  >
+    <Image src={arrowRight} alt="Arrow Right" />
+  </button>
+</div>

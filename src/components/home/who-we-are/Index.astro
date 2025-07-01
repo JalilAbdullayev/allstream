@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import whoWeAre from "/src/assets/who-we-are.jpg";
+import Slide from "./Slide.astro";
+import Arrows from "./Arrows.astro";
+---
+
+<section
+  class="container grid grid-cols-1 2xl:grid-cols-5 md:grid-cols-3 py-22 pb-27"
+>
+  <div class="2xl:col-span-2 md:col-span-1">
+    <Image
+      src={whoWeAre}
+      alt="Who we are"
+      loading="eager"
+      class="md:max-lg:h-full xl:aspect-square"
+    />
+  </div>
+  <div
+    class="2xl:col-span-3 md:col-span-2 bg-zinc-50 pt-12.5 pb-7.5 ps-7.5 pe-12.5 relative"
+  >
+    <div class="swiper who-swiper">
+      <div class="swiper-wrapper">
+        <Slide />
+        <Slide />
+      </div>
+    </div>
+    <Arrows />
+  </div>
+</section>
+
+<script>
+  import Swiper from "swiper";
+  import { Navigation } from "swiper/modules";
+
+  const whoSwiper = new Swiper(".who-swiper", {
+    modules: [Navigation],
+    loop: true,
+    navigation: {
+      nextEl: "#nextBtn",
+      prevEl: "#prevBtn",
+    },
+  });
+</script>

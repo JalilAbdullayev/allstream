@@ -1,0 +1,31 @@
+---
+import Slide from "./Slide.astro";
+import Navbar from "./Navbar.astro";
+---
+
+<header class="relative h-200">
+  <Navbar />
+  <div class="h-full swiper hero-swiper">
+    <div class="h-full swiper-wrapper">
+      <Slide />
+      <Slide />
+    </div>
+    <div
+      class="swiper-pagination flex items-center gap-2.5 justify-center bottom-15!"
+    >
+    </div>
+  </div>
+</header>
+<script>
+  import Swiper from "swiper";
+  import { Pagination } from "swiper/modules";
+
+  const heroSwiper = new Swiper(".hero-swiper", {
+    modules: [Pagination],
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>

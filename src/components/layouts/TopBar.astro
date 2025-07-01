@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import search from "/src/assets/search.svg";
+import facebook from "/src/assets/social/facebook.svg";
+import linkedin from "/src/assets/social/linkedin.svg";
+import twitter from "/src/assets/social/twitter.svg";
+import instagram from "/src/assets/social/instagram.svg";
+import youtube from "/src/assets/social/youtube.svg";
+---
+
+<section class="bg-[#192631] py-3">
+  <div
+    class="container flex items-center justify-center gap-6 lg:justify-end max-sm:flex-col"
+  >
+    <div class="flex items-center gap-5">
+      <a href="https://www.facebook.com/" target="_blank">
+        <Image src={facebook} alt="Facebook" loading="eager" />
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank">
+        <Image src={linkedin} alt="LinkedIn" loading="eager" />
+      </a>
+      <a href="https://www.twitter.com/" target="_blank">
+        <Image src={twitter} alt="Twitter" loading="eager" />
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <Image src={instagram} alt="Instagram" loading="eager" />
+      </a>
+      <a href="https://www.youtube.com/" target="_blank">
+        <Image src={youtube} alt="Youtube" loading="eager" />
+      </a>
+    </div>
+    <div class="w-px h-10 bg-[#AEAEAE] max-sm:hidden"></div>
+    <form action="" class="relative">
+      <input
+        type="search"
+        placeholder="Search"
+        class="py-2 tracking-wider text-white bg-white/10 tex-sm ps-4 focus:outline-0"
+      />
+      <button type="submit" class="absolute end-4 inset-y-1.5 cursor-pointer">
+        <Image src={search} alt="Search" loading="eager" />
+      </button>
+    </form>
+  </div>
+</section>
