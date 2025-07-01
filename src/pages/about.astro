@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+import Header from "../components/layouts/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import whoWeAre from "../assets/who-we-are.jpg";
+import about from "../assets/about.jpg";
+---
+
+<Layout>
+  <main class="pt-9 pb-52 bg-neutral-100">
+    <section class="container">
+      <Header title="About us" />
+      <div class="flex flex-col mt-9 gap-12.5">
+        <div class="grid lg:grid-cols-2">
+          <Image
+            src={whoWeAre}
+            alt="About"
+            loading="eager"
+            class="lg:aspect-square"
+          />
+          <div
+            class="bg-white px-7.5 py-16.5 text-sm font-light leading-7 tracking-widest text-[#303030] flex items-center"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software. Lorem Ipsum is
+            simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy text ever since the
+            1500s, when an unknown printer took a galley of type and scrambled
+            it to make a type specimen book. It has survived not only five
+            centuries, but also the leap into electronic typesetting, remaining
+            essentially unchanged. It was popularised in the 1960s with the
+            release of Letraset sheets containing Lorem Ipsum passages, and more
+            recently with desktop publishing software.
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-2">
+          <div
+            class="bg-white px-7.5 py-16.5 text-sm font-light leading-7 tracking-widest text-[#303030] flex items-center max-lg:order-2"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software. Lorem Ipsum is
+            simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy text ever since the
+            1500s, when an unknown printer took a galley of type and scrambled
+            it to make a type specimen book. It has survived not only five
+            centuries, but also the leap into electronic typesetting, remaining
+            essentially unchanged. It was popularised in the 1960s with the
+            release of Letraset sheets containing Lorem Ipsum passages, and more
+            recently with desktop publishing software.
+          </div>
+          <Image
+            src={about}
+            alt="About"
+            loading="eager"
+            class="lg:aspect-square"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

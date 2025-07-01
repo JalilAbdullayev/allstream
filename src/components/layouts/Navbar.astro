@@ -6,109 +6,111 @@ import chevronDownDark from "/src/assets/chevron-down-dark.svg";
 ---
 
 <nav
-  class="container py-5 max-lg:px-4 lg:px-0 max-lg:mx-0 max-lg:min-w-full lg:mx-auto lg:border-b-2 lg:border-[#D8DBF6] navbar"
+  class="pt-7 pb-4 max-lg:px-4 lg:px-0 max-lg:mx-0 max-lg:min-w-full lg:mx-auto lg:border-b-2 lg:border-[#D8DBF6] navbar"
 >
-  <div class="w-full lg:flex lg:items-center lg:gap-2">
-    <div class="flex items-center justify-between">
-      <div
-        class="items-center justify-between navbar-start max-lg:w-full size-full"
-      >
-        <a href="/">
-          <Image src={logo} alt="Logo" loading="eager" />
-        </a>
-        <div class="lg:hidden">
-          <button
-            type="button"
-            class="border-[#192631] collapse-toggle btn btn-outline btn-lg btn-square"
-            data-collapse="#dropdown-navbar-collapse"
-            aria-controls="dropdown-navbar-collapse"
-            aria-label="Toggle navigation"
-          >
-            <span class="collapse-open:hidden">
-              <Icon name="tabler:menu-2" size={28} color="#192631" />
-            </span>
-            <span class="hidden collapse-open:block">
-              <Icon name="tabler:x" size={28} color="#192631" />
-            </span>
-          </button>
+  <div class="container">
+    <div class="w-full lg:flex lg:items-center lg:gap-2">
+      <div class="flex items-center justify-between">
+        <div
+          class="items-center justify-between navbar-start max-lg:w-full size-full"
+        >
+          <a href="/">
+            <Image src={logo} alt="Logo" loading="eager" />
+          </a>
+          <div class="lg:hidden">
+            <button
+              type="button"
+              class="border-[#192631] collapse-toggle btn btn-outline btn-lg btn-square"
+              data-collapse="#dropdown-navbar-collapse"
+              aria-controls="dropdown-navbar-collapse"
+              aria-label="Toggle navigation"
+            >
+              <span class="collapse-open:hidden">
+                <Icon name="tabler:menu-2" size={28} color="#192631" />
+              </span>
+              <span class="hidden collapse-open:block">
+                <Icon name="tabler:x" size={28} color="#192631" />
+              </span>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      id="dropdown-navbar-collapse"
-      class="lg:navbar-end collapse hidden grow basis-full overflow-hidden transition-[height] duration-300 max-lg:w-full"
-    >
-      <ul
-        class="gap-2 p-0 text-base menu lg:menu-horizontal max-lg:mt-5 lg:gap-5"
+      <div
+        id="dropdown-navbar-collapse"
+        class="lg:navbar-end collapse hidden grow basis-full overflow-hidden transition-[height] duration-300 max-lg:w-full"
       >
-        <li>
-          <a
-            href="#"
-            class="text-xl leading-none uppercase hover:bg-transparent"
-          >
-            ABOUT US
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            class="text-xl leading-none uppercase hover:bg-transparent"
-          >
-            WHAT WE DO
-          </a>
-        </li>
-        <li>
-          <a
-            href="/blog"
-            class="text-xl leading-none uppercase hover:bg-transparent"
-          >
-            BLOG
-          </a>
-        </li>
-        <li>
-          <a
-            href="/contact"
-            class="text-xl leading-none uppercase hover:bg-transparent"
-          >
-            CONTACT
-          </a>
-        </li>
-        <li
-          class="dropdown relative inline-flex [--auto-close:inside] [--offset:9] [--placement:bottom-end]"
+        <ul
+          class="gap-2 p-0 text-base menu lg:menu-horizontal max-lg:mt-5 lg:gap-5"
         >
-          <button
-            id="dropdown-nav"
-            type="button"
-            class="flex items-center text-xl dropdown-toggle dropdown-open:bg-base-content/10 leading-none hover:bg-transparent gap-2.5 dropdown-open:underline"
-            aria-haspopup="menu"
-            aria-expanded="false"
-            aria-label="Dropdown"
+          <li>
+            <a
+              href="/about"
+              class="text-xl leading-none uppercase hover:bg-transparent"
+            >
+              ABOUT US
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-xl leading-none uppercase hover:bg-transparent"
+            >
+              WHAT WE DO
+            </a>
+          </li>
+          <li>
+            <a
+              href="/blog"
+              class="text-xl leading-none uppercase hover:bg-transparent"
+            >
+              BLOG
+            </a>
+          </li>
+          <li>
+            <a
+              href="/contact"
+              class="text-xl leading-none uppercase hover:bg-transparent"
+            >
+              CONTACT
+            </a>
+          </li>
+          <li
+            class="dropdown relative inline-flex [--auto-close:inside] [--offset:9] [--placement:bottom-end]"
           >
-            Eng
-            <Image
-              src={chevronDownDark}
-              alt="Chevron Down"
-              class="duration-300 size-4 dropdown-open:rotate-180"
-            />
-          </button>
-          <ul
-            class="hidden dropdown-menu dropdown-open:opacity-100"
-            role="menu"
-            aria-orientation="vertical"
-            aria-labelledby="dropdown-nav"
-          >
-            <li>
-              <a class="dropdown-item" href="#"> Aze </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"> Eng </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"> Rus </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+            <button
+              id="dropdown-nav"
+              type="button"
+              class="flex items-center text-xl dropdown-toggle dropdown-open:bg-base-content/10 leading-none hover:bg-transparent gap-2.5 dropdown-open:underline"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-label="Dropdown"
+            >
+              Eng
+              <Image
+                src={chevronDownDark}
+                alt="Chevron Down"
+                class="duration-300 size-4 dropdown-open:rotate-180"
+              />
+            </button>
+            <ul
+              class="hidden dropdown-menu dropdown-open:opacity-100"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="dropdown-nav"
+            >
+              <li>
+                <a class="dropdown-item" href="#"> Aze </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"> Eng </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"> Rus </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
