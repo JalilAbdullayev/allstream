@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import Header from "../components/layouts/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import phone from "../assets/phone.svg";
+import location from "../assets/location.svg";
+import email from "../assets/mail.svg";
+---
+
+<Layout>
+  <main class="container pb-13 pt-9">
+    <Header title="Contact us" />
+    <section class="flex justify-between mt-13 gap-y-12.5 flex-wrap">
+      <ul class="flex flex-col gap-4 list-none list-inside">
+        <li
+          class="inline-flex items-center gap-3 text-[#363333] text-base leading-7.5 tracking-[6%]"
+        >
+          <Image src={location} alt="" />Baku, Narimanov disc., 11A
+        </li>
+        <li>
+          <a
+            href="tel:+994502160050"
+            class="inline-flex items-center gap-3 text-[#363333] text-base leading-7.5 tracking-[6%]"
+          >
+            <Image src={phone} alt="" /> +994 50 216 00 50
+          </a>
+        </li>
+        <li>
+          <a
+            href="mailto:info@allstream.az"
+            class="inline-flex items-center gap-3 text-[#363333] text-base leading-7.5 tracking-[6%]"
+          >
+            <Image src={email} alt="" /> info@allstream.az
+          </a>
+        </li>
+      </ul>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194473.52374674258!2d49.69015577437961!3d40.39447551875721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6bd6211cf9%3A0x343f6b5e7ae56c6b!2sBaku!5e0!3m2!1sen!2saz!4v1751367621654!5m2!1sen!2saz"
+        width="750"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+</Layout>

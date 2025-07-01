@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { title } = Astro.props;
+---
+
+<div class="flex flex-col gap-3">
+  <h1 class="text-2xl font-semibold leading-none text-[#192631]">{title}</h1>
+  <nav class="breadcrumbs">
+    <ul>
+      <li>
+        <a href="#" class="text-sm text-[#AEAEAE] leading-5 font-light">
+          Main page
+        </a>
+      </li>
+      <li class="breadcrumbs-separator rtl:rotate-180">
+        <Icon name="tabler:chevron-right" size={14} color="#AEAEAE" />
+      </li>
+      <li
+        aria-current="page"
+        class="text-sm text-[#AEAEAE]! leading-5 font-light!"
+      >
+        {title}
+      </li>
+    </ul>
+  </nav>
+</div>

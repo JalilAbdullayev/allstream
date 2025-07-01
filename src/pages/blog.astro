@@ -1,32 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Article from "../components/Blog.astro";
-import { Icon } from "astro-icon/components";
+import Header from "../components/layouts/Header.astro";
 ---
 
 <Layout title="Blog">
   <main class="container pb-20 pt-9">
-    <div class="flex flex-col gap-3">
-      <h1 class="text-2xl font-semibold leading-none text-[#192631]">Blogs</h1>
-      <nav class="breadcrumbs">
-        <ul>
-          <li>
-            <a href="#" class="text-sm text-[#AEAEAE] leading-5 font-light">
-              Main page
-            </a>
-          </li>
-          <li class="breadcrumbs-separator rtl:rotate-180">
-            <Icon name="tabler:chevron-right" size={14} color="#AEAEAE" />
-          </li>
-          <li
-            aria-current="page"
-            class="text-sm text-[#AEAEAE]! leading-5 font-light!"
-          >
-            Blogs
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <Header title="Blogs" />
     <section class="grid lg:grid-cols-3 gap-x-9 gap-y-12.5 mt-9">
       <Article image="/src/assets/blog-4.jpg" />
       <Article image="/src/assets/blog-5.jpg" />
