@@ -1,0 +1,79 @@
+---
+import { Icon } from "astro-icon/components";
+import Single from "../components/Service.astro";
+import Title from "../components/Title.astro";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import blog6 from "/src/assets/blog-6.jpg";
+---
+
+<Layout title="Service 1">
+  <main class="container pb-36 pt-9">
+    <div class="flex flex-col gap-3">
+      <h1 class="text-2xl font-semibold leading-none text-[#192631]">
+        Service 1
+      </h1>
+      <nav class="breadcrumbs">
+        <ul>
+          <li>
+            <a href="/" class="text-sm text-[#AEAEAE] leading-5 font-light">
+              Main page
+            </a>
+          </li>
+          <li class="breadcrumbs-separator rtl:rotate-180">
+            <Icon name="tabler:chevron-right" size={14} color="#AEAEAE" />
+          </li>
+          <li>
+            <a
+              href="/what-we-do"
+              class="text-sm text-[#AEAEAE] leading-5 font-light"
+            >
+              What we do
+            </a>
+          </li>
+          <li class="breadcrumbs-separator rtl:rotate-180">
+            <Icon name="tabler:chevron-right" size={14} color="#AEAEAE" />
+          </li>
+          <li
+            aria-current="page"
+            class="text-sm text-[#AEAEAE]! leading-5 font-light!"
+          >
+            Service 1
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="grid lg:grid-cols-3 pt-9 pb-12.5 gap-10">
+      <div>
+        <Image src={blog6} alt="Blog" loading="eager" class="aspect-square" />
+      </div>
+      <div class="lg:col-span-2">
+        <h2
+          class="text-2xl font-bold leading-7.5 tracking-widest text-[#363333]"
+        >
+          Lorem Ipsum is simply dummy text
+        </h2>
+        <div class="text-sm leading-8 tracking-widest text-[#363333] py-5">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomised words which don't look even slightly believable.
+          If you are going to use a passage of Lorem Ipsum, you need to be sure
+          there isn't anything embarrassing hidden in the middle of text.
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It
+          has roots in a piece of classical Latin literature from 45 BC, making
+          it over 2000 years old. Richard McClintock, a Latin professor at
+          Hampden-Sydney College in Virginia, looked up one of the more obscure
+          Latin words, consectetur, from a Lorem Ipsum passage, and going
+          through the cites of the word in classical literature, discovered the
+          undoubtable source.
+        </div>
+      </div>
+    </div>
+    <Title title="Other services" />
+    <div class="grid lg:grid-cols-3 gap-x-9 gap-y-12.5 mt-9">
+      <Single image="/src/assets/blog-1.jpg" />
+      <Single image="/src/assets/blog-2.jpg" />
+      <Single image="/src/assets/blog-3.jpg" />
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+
+const { image } = Astro.props;
+---
+
+<a href="/service">
+  <Image
+    src={image}
+    alt="Blog"
+    loading="eager"
+    width={410}
+    height={360}
+    class="object-cover w-full h-90 max-lg:mx-auto mb-5"
+  />
+  <h3
+    class="mb-4 font-bold text-[22px] leading-7.5 tracking-widest text-[#363333]"
+  >
+    Lorem Ipsum is simply dummy text
+  </h3>
+  <div class="text-xs leading-7 text-[#363333] tracking-[15%]">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the
+    1500s...
+  </div>
+</a>
