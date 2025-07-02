@@ -8,11 +8,11 @@ import Layout from "../layouts/Layout.astro";
   <main class="container pb-20 pt-9">
     <Header title="FAQ" />
     <div class="accordion divide-neutral/20 divide-y">
-      <div class="accordion-item active" id="payment-basic">
+      <div class="accordion-item" id="payment-basic">
         <button
           class="accordion-toggle inline-flex items-center gap-x-4 text-start"
           aria-controls="payment-basic-collapse"
-          aria-expanded="true"
+          aria-expanded="false"
         >
           <Icon
             name="tabler:plus"
@@ -26,7 +26,7 @@ import Layout from "../layouts/Layout.astro";
         </button>
         <div
           id="payment-basic-collapse"
-          class="accordion-content w-full overflow-hidden transition-[height] duration-300"
+          class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
           aria-labelledby="payment-basic"
           role="region"
         >
@@ -35,38 +35,6 @@ import Layout from "../layouts/Layout.astro";
               Payment is taken during the checkout process when you pay for your
               order. The order number that appears on the confirmation screen
               indicates payment has been successfully processed.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item" id="delivery-basic">
-        <button
-          class="accordion-toggle inline-flex items-center gap-x-4 text-start"
-          aria-controls="delivery-basic-collapse"
-          aria-expanded="false"
-        >
-          <Icon
-            name="tabler:plus"
-            class="accordion-item-active:hidden text-base-content size-4.5 block shrink-0"
-          />
-          <Icon
-            name="tabler:minus"
-            class="accordion-item-active:block text-base-content size-4.5 hidden shrink-0"
-          />
-          How would you ship my order?
-        </button>
-        <div
-          id="delivery-basic-collapse"
-          class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-          aria-labelledby="delivery-basic"
-          role="region"
-        >
-          <div class="px-5 pb-4">
-            <p class="text-base-content/80 font-normal">
-              For large products, we deliver your product via a third party
-              logistics company offering you the “room of choice” scheduled
-              delivery service. For small products, we offer free parcel
-              delivery.
             </p>
           </div>
         </div>
